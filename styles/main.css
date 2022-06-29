@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all .5s ease-in-out;
 }
 
 body {
@@ -99,7 +100,8 @@ section{
 #weatherMain {
     display:flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 100%;
     margin-bottom: 15px;
 }
 #weatherMain div {
@@ -109,7 +111,7 @@ section{
 #temperature {
     font-size: 30px;
     /* vertical-align: 25%; */
-    text-align: center;
+    /* margin-left: -5px; */
 }
 #documentIconImg {
     display: block;

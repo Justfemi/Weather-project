@@ -12,12 +12,12 @@ function getSearchMethod(searchTerm){
 
 function searchWeather(searchTerm) {
     getSearchMethod(searchTerm);
-    fetch (`http://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&APPID=${appid}&units=${units}`)
+    fetch (`https://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&APPID=${appid}&units=${units}`)
     .then( result => {
         return result.json();
     }).then( result => {
         init(result);
-    })
+    }) 
 }
 function init(resultFromServer){
     console.log(resultFromServer);
@@ -80,4 +80,6 @@ document.getElementById('searchButton').addEventListener('click', ()=> {
 
     if (searchTerm)
         searchWeather(searchTerm);
+    else 
+        console.log('Enter a valid code')
 })

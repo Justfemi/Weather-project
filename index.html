@@ -1,61 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Weather App</title>
-        <link rel="icon" href="images/cloud.png" sizes="32x32" type="image/png">
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.6/css/boxicons.min.css' rel='stylesheet'>
-        <link rel=stylesheet href="styles/main.css">
-    </head>
-    <body>
-        <main>
-        <!--HEADER-->
-            <header>
-                <div class="header" alt="Smash It Weather Logo">
-                    <a href="./index.html" class="logo">
-                        <h1>LOGO</h1>
-                    </a>
-                </div>
-                <div class="searchContainer">
-                    <div class="searchSack">
-                        <input class="searchControl" type="search" placeholder="Enter city or zip code" id="searchInput">
-                        <i class='bx bx-search-alt-2' id='searchIcon'></i>
-                    </div>
-                    <button class="searchControl" id="searchButton" onclick={searchWeather}>Search</button>
-                </div>
-            </header>
-            <!--BODY-->
-            <section class="nil">
-                <div id="weatherContainer" style="display: flex">
-                    <div class="weatherDescription">
-                        <h1 id="cityHeader"></h1>
-                        <div style="display: flex">
-                            <img id=documentIconImg>
-                        </div>
-                        <div id=weatherMain>
-                            <div id="temperature" ></div>
-                            <div id="weatherDescriptionHeader"></div>
-                        </div>
-                        <hr>
-                        <div id="windspeed" class="bottom-details"></div>
-                        <div id="humidity" class="bottom-details"></div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <!--FOOTER -->
-        <!-- <footer class="footer">
-            <p class="footer__title">AjibadeOlufemi</p>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+  <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+  <link href="src/AnimatedSearchBox.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Weather forecast app</title>
+</head>
+<body>
+  <div class="searchContainer">
+    <input type="search" placeholder='Enter city name here'>
+    <button id='search-btn'>Search</button>
+  </div>
+  <div id="windy"></div>
 
-            <div class="footer__social">
-                <a href="https://twitter.com/Justfemi10" target="_blank" class="footer__icon"><i class="bx bxl-twitter"></i></a>
-                <a href="http://wa.me/2349032983949" target="_blank" class="footer__icon"><i class='bx bxl-whatsapp'></i></a>
-                <a href="https://www.instagram.com/justfemi_10/" target="_blank" class="footer__icon"><i class="bx bxl-instagram"></i></a>
-            </div> 
-    
-            <p>&#169; 2020 copyright all right reserved</p>
-        </footer>  -->
-        
-        <script src="script/main.js"></script>
-    </body>
+  <script src="./app.js"></script>
+  <script src="src/AnimatedSearchBox.js"></script>
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+</body>
 </html>

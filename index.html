@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="./img/favicon.png" size=32x32" color="white" type="image/x-icon">
+  <link rel="shortcut icon" href="./img/favicon.png" size="32x32" type="image/x-icon">
   <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
   <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
   <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
@@ -14,9 +14,14 @@
 </head>
 <body>
   <nav>
-    <a href="#">
-      <img src="./img/logo-1.png" alt="weather-logo">
-    </a>
+    <div class="logo-box">
+      <a href="#">
+        <img src="./img/logo-1.png" alt="weather-logo" class="app-logo">
+      </a>
+      <a>
+        <img src="./img/logo-2.png" alt="schhool-logo" class="school-logo"/>
+      </a>
+    </div>
     <div class="searchContainer">
       <input type="search" placeholder='Enter city name here'>
       <button id='search-btn'>Search</button>

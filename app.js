@@ -2,7 +2,6 @@ let latlng;
 let btn = document.querySelector('#search-btn');
 
 const options = {
-  // Required: API key
   key: 'K6nwe7jGOglTjVykn7AFR9NQ84ga8Cdt',
 
   // Put additional console output
@@ -13,7 +12,6 @@ const options = {
   lon: 14.3,
   zoom: 5,
 };
-
 
 
 // Initialize Windy API
@@ -27,15 +25,14 @@ windyInit(options, windyAPI => {
   }).addTo(map);
 
   L.marker([51.5, -0.09]).addTo(map)
-      .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-      .openPopup();
 
-  L.Control.geocoder().addTo(map);
 
-  var searchbox = L.control.searchbox({
-    position: 'topright',
-    expand: 'left'
-  }).addTo(map);
+  // L.Control.geocoder().addTo(map);
+
+  // var searchbox = L.control.searchbox({
+  //   position: 'topright',
+  //   expand: 'left'
+  // }).addTo(map);
 });
 
 
@@ -44,7 +41,3 @@ btn.addEventListener('click',
     console.log('search-btn clicked')
   }
 );
-
-
-//set initial state of lat and lon at 50.4 & 14.3 respectively
-//Upon user input, change value of lat and lon and add it to the value of setLatLng
